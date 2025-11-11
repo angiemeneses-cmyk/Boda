@@ -411,8 +411,8 @@
 
     function exportGuests(){
       if(!isLoggedIn)return;if(!guestsData.length){alert('No hay confirmaciones.');return;}
-      let csv='Nombre,Correo,Acompañantes,Fecha de Confirmación\n';
-      guestsData.forEach(g=>{csv+=`"${g.nombre}","${g.correo}",${g.acompanantes||0},"${new Date(g.fecha).toLocaleDateString('es-ES')}"\n`;});
+      let csv='Nombre,Alergias,Acompañantes,Fecha de Confirmación\n';
+      guestsData.forEach(g=>{csv+=`"${g.nombre}","${g.Alergias}",${g.acompanantes||0},"${new Date(g.fecha).toLocaleDateString('es-ES')}"\n`;});
       const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
       const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='confirmaciones_boda_margarita_harold.csv';a.click();
     }
