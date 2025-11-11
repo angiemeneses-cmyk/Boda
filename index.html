@@ -422,7 +422,7 @@
       document.getElementById('rsvpForm').addEventListener('submit',e=>{
         e.preventDefault();
         const n=document.getElementById('nombre').value.trim();
-        const c=document.getElementById('correo')?document.getElementById('correo').value.trim():"";
+        const c=document.getElementById('Intolerancia/alergias')?document.getElementById('ntolerancia/alergias').value.trim():"";
         const a=parseInt(document.getElementById('acompanantes').value)||0;
         if(!n){alert('Por favor completa tu nombre.');return;}
         const g={nombre:n,correo:c,acompanantes:a,fecha:new Date().toISOString()};
